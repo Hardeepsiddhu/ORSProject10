@@ -20,6 +20,11 @@ export class EndpointServiceService {
   public COURSE = this.SERVER_URL + "/Course";
   public TIMETABLE = this.SERVER_URL+ "/TimeTable";
   public JASPERREPORT = this.SERVER_URL+ "/Jasper";
- 
-  public EMP = this.SERVER_URL + "/Emp";
+
+  public LEAD = this.SERVER_URL+ "/Lead";
+  public CONTACT = this.SERVER_URL+ "/Contact";
+  public ASSETTRACKING = this.SERVER_URL+ "/AssetTracking";
+  public ORDER = this.SERVER_URL+ "/Order";
+
+  
 }

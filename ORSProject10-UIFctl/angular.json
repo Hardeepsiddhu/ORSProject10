@@ -58,6 +58,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "port": 4200,
             "browserTarget": "P10-UI:build"
             
           },

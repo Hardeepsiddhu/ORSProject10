@@ -71,6 +71,7 @@ public class UserDAOImpl extends BaseDAOImpl<UserDTO> implements UserDAOInt {
 		}
 
 		if (isNotNull(dto.getDob())) {
+			System.out.println("jjjjjjjjjjjjjjjjjjjjj"+dto.getDob());
 
 			whereCondition.add(builder.equal(qRoot.get("dob"), dto.getDob()));
 		}

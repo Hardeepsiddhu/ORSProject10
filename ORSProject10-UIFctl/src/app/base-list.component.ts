@@ -149,6 +149,8 @@ deleteMany(){
   this.deleteRecordList.length=0;
   console.log('record deleting start ')
   var isRecordSelected:boolean = false ;
+  this.form.pageNo=0;
+  
  
     this.checkboxes.forEach((element) => {
       if (element.nativeElement.checked) {

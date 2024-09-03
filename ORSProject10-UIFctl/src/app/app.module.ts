@@ -52,8 +52,15 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyprofileComponent } from './user/myprofile.component';
 import { AuthService } from './auth-service.service';
-import { EmpComponent } from './emp/emp.component';
-import { EmpListComponent } from './emp/emplist.component';
+
+import { LeadComponent } from './lead/lead.component';
+import { LeadlistComponent } from './lead/leadlist.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactlistComponent } from './contact/contactlist.component';
+import { AssetTrackingComponent} from './assettracking/assettracking.component';
+import { AssetTrackingListComponent} from './assettracking/assettrackinglist.component';
+import { OrderComponent } from './order/order.component';
+import { OrderListComponent } from './order/orderlist.component';
 
 
 // import { AuthService } from './auth.service';
@@ -102,8 +109,16 @@ export function myHttpLoader(http: HttpClient) {
     SpinnerComponent,
     FooterComponent,
     MyprofileComponent,
-    EmpComponent,
-    EmpListComponent,
+
+    LeadComponent,
+    LeadlistComponent,
+    ContactComponent,
+    ContactlistComponent,
+    AssetTrackingComponent,
+    AssetTrackingListComponent,
+    OrderComponent,
+    OrderListComponent,
+    
 
 
 

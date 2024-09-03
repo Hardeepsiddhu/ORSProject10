@@ -33,7 +33,7 @@ export class HttpServiceService {
       callback(data);
 
     }, error => {
-      console.log('ORS Error--', error);
+      console.log('ORS Error--', error);1
       if (error.status === 401) {
         localStorage.clear();
         this.userparams.url = this.router.url;

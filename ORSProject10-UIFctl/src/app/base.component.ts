@@ -253,9 +253,10 @@ export class BaseCtl implements OnInit {
 
   deleteMany(id, callback?) {
     var _self = this;
-    this.serviceLocator.httpService.post(_self.api.deleteMany + "/" + id, this.form.data, function (res) {
+    this.serviceLocator.httpService.post(_self.api.deleteMany + "/" + id, this.form.searchParams, function (res) {
       if (res.success) {
         _self.form.message = "Data is deleted";
+        const pageNo =0;
 
         if (callback) {
           console.log('Response Success and now Calling Callback');
@@ -298,4 +299,6 @@ export class BaseCtl implements OnInit {
     this.serviceLocator.forward(page);
   }
 
+
+ 
 }

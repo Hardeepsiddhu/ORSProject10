@@ -34,8 +34,15 @@ import { ChangepasswordComponent } from "./user/changepassword.component";
 import { LoaderComponent } from './loader/loader.component';
 import { SpinnerComponent} from './spinner/spinner.component';
 import {MyprofileComponent} from './user/myprofile.component';
-import { EmpComponent } from './emp/emp.component';
-import { EmpListComponent } from './emp/emplist.component';
+import { LeadComponent } from './lead/lead.component';
+import { LeadlistComponent } from './lead/leadlist.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactlistComponent } from './contact/contactlist.component';
+import { AssetTrackingComponent } from './assettracking/assettracking.component';
+import { AssetTrackingListComponent } from './assettracking/assettrackinglist.component';
+import { OrderComponent } from './order/order.component';
+import { OrderListComponent } from './order/orderlist.component';
+
 
 const routes: Routes = [
     {
@@ -248,16 +255,48 @@ const routes: Routes = [
       
 
     },  {
-        path:'emp',
-        component:EmpComponent
+        path:'lead',
+        component:LeadComponent
     },{
-        path:'emplist',
-        component:EmpListComponent
+        path:'leadlist',
+        component:LeadlistComponent
     },{
-        path : 'emp/:id',
-        component:EmpComponent
-    }
-
+        path : 'lead/:id',
+        component:LeadComponent
+    },
+    {
+        path:'contact',
+        component:ContactComponent
+    },{
+        path:'contactlist',
+        component:ContactlistComponent
+    },{
+        path : 'contact/:id',
+        component:ContactComponent
+    },
+   
+    {
+        path:'assettracking',
+        component:AssetTrackingComponent
+    },{
+        path:'assettrackinglist',
+        component:AssetTrackingListComponent
+    },{
+        path : 'assettracking/:id',
+        component:AssetTrackingComponent
+    },
+  
+    {
+        path:'order',
+        component:OrderComponent
+    },{
+        path:'orderlist',
+        component:OrderListComponent
+    },{
+        path : 'order/:id',
+        component:OrderComponent
+    },
+  
     
     
 ];

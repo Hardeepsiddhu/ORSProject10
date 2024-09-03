@@ -243,6 +243,8 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 				if (existDto1 != null && dto.getId() != existDto1.getId()) {
 					res.addMessage(dto.getLabel() + " already exist");
 					res.setSuccess(false);
+					res.addData(dto);
+
 					return res;
 				}
 				baseService.update(dto, userContext);
@@ -255,7 +257,7 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 						System.out.println("247----------->" + existDto);
 						res.addMessage(dto.getLabel() + " already exist");
 						res.setSuccess(false);
-						return res;
+												return res;
 					}
 				}
 

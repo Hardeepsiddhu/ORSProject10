@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  */
 
 
-@ControllerAdvice // handle exception globally
+@ControllerAdvice // handle exception globally	
 public class ApplicationExceptionHandlerCtl {
 
 	@ExceptionHandler(value = RuntimeException.class) // custom exception handle

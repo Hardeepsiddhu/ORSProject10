@@ -203,47 +203,47 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		res.addMessage("User has been registered");
 		return res;
 	}
-//	@PostMapping("/profilePic/{userId}")
-//	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,
-//			HttpServletRequest req) {
-//
-//		System.out.println("User ID id --------------Hardeep Siddhu" + userId);
-//
-//		UserDTO userDTO = baseService.findById(userId, userContext);
-//
-//		AttachmentDTO doc = new AttachmentDTO(file);
-//
-//		doc.setDescription("Profile picture");
-//		System.out.println(doc.getDescription() + "description");
-//
-//		doc.setPath(req.getServletPath());
-//		System.out.println(doc.getPath() + "path-----rahul");
-//
-//		doc.setUserId(userId);
-//		System.out.println(doc.getUserId() + "id-----rahul");
-//
-//		if (userDTO.getImageId() != null && userDTO.getImageId() > 0) {
-//			doc.setId(userDTO.getImageId());
-//		}
-//		System.out.println("before calling save");
-//
-//		Long imageId = attachmentService.save(doc, userContext);
-//
-//		System.out.println("after save");
-//
-//		// Update new image id
-//
-//		if (userDTO.getImageId() == null || userDTO.getImageId() == 0) {
-//			userDTO.setImageId(imageId);
-//			baseService.update(userDTO, userContext);
-//		}
-//
-//		ORSResponse res = new ORSResponse();
-//		res.setSuccess(true);
-//		res.addResult("imageId", imageId);
-//
-//		return res;
-//	}
+	@PostMapping("/profilePic/{userId}")
+	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,
+			HttpServletRequest req) {
+
+		System.out.println("User ID id --------------Hardeep Siddhu" + userId);
+
+		UserDTO userDTO = baseService.findById(userId, userContext);
+
+		AttachmentDTO doc = new AttachmentDTO(file);
+
+		doc.setDescription("Profile picture");
+		System.out.println(doc.getDescription() + "description");
+
+		doc.setPath(req.getServletPath());
+		System.out.println(doc.getPath() + "path-----rahul");
+
+		doc.setUserId(userId);
+		System.out.println(doc.getUserId() + "id-----rahul");
+
+		if (userDTO.getImageId() != null && userDTO.getImageId() > 0) {
+			doc.setId(userDTO.getImageId());
+		}
+		System.out.println("before calling save");
+
+		Long imageId = attachmentService.save(doc, userContext);
+
+		System.out.println("after save");
+
+		// Update new image id
+
+		if (userDTO.getImageId() == null || userDTO.getImageId() == 0) {
+			userDTO.setImageId(imageId);
+			baseService.update(userDTO, userContext);
+		}
+
+		ORSResponse res = new ORSResponse();
+		res.setSuccess(true);
+		res.addResult("imageId", imageId);
+
+		return res;
+	}
 
 //	@PostMapping("/profilePic/{userId}")
 //	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,
